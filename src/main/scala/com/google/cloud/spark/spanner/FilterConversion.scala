@@ -24,6 +24,9 @@ trait FilterConversion extends Logging {
 
   object SpannerDialect extends JdbcDialect {
     override def canHandle(url : String): Boolean = false
+
+    //TODO: what if the columnName is reserved word ?
+    override def quoteIdentifier(colName: String): String = colName
   }
 
   def toSql(f: Filter): Option[String] = {

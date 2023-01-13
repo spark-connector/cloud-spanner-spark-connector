@@ -60,12 +60,14 @@ object SparkApp extends App {
       q.explain()
       val namesCount = q.count
       println(s"""Number of names matching (startsWith "A"): $namesCount""")
+      q.show()
     }
     {
       val q = accounts.where($"name" isin ("just", "for", "testing"))
       q.explain()
       val namesCount = q.count
       println(s"Number of names matching isin: $namesCount")
+      q.show()
     }
 
   } finally {
