@@ -16,17 +16,17 @@ name         := "spark-cloud-spanner"
 organization := "com.google.cloud.spark"
 version      := "0.1.0-alpha-SNAPSHOT"
 
-scalaVersion := "2.12.8"
+scalaVersion := "2.13.10"
 
 libraryDependencies += "com.google.cloud" % "google-cloud-spanner" % "1.1.0"
-libraryDependencies += "org.apache.spark" %% "spark-sql" % "2.4.0" % Provided
+libraryDependencies += "org.apache.spark" %% "spark-sql" % "3.3.1" % Provided
 
-val scalatestVer = "3.2.0-SNAP10"
+val scalatestVer = "3.3.0-SNAP3"
 libraryDependencies += "org.scalactic" %% "scalactic" % scalatestVer
 libraryDependencies += "org.scalatest" %% "scalatest" % scalatestVer % Test
 // scalacheck to fix an issue with scalatest
 // (Test / executeTests) java.lang.NoClassDefFoundError: org/scalacheck/Test$TestCallback
-libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.14.0" % Test
+libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.17.0" % Test
 
 
 //dependencyOverrides += "com.google.guava" % "guava" % "23.0"
