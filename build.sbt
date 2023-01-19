@@ -28,6 +28,10 @@ libraryDependencies += "org.scalatest" %% "scalatest" % scalatestVer % Test
 // (Test / executeTests) java.lang.NoClassDefFoundError: org/scalacheck/Test$TestCallback
 libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.14.0" % Test
 
+
+//dependencyOverrides += "com.google.guava" % "guava" % "23.0"
+
+
 // https://github.com/sbt/sbt-assembly#shading
 // https://cloud.google.com/blog/products/data-analytics/managing-java-dependencies-apache-spark-applications-cloud-dataproc
 test in assembly := {}
