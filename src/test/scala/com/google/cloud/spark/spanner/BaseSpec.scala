@@ -16,9 +16,11 @@
 package com.google.cloud.spark.spanner
 
 import org.apache.spark.sql.SparkSession
-import org.scalatest.{BeforeAndAfterAll, FlatSpec, Matchers}
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.{BeforeAndAfterAll}
 
-abstract class BaseSpec extends FlatSpec
+abstract class BaseSpec extends AnyFlatSpec
   with Matchers
   with BeforeAndAfterAll {
 

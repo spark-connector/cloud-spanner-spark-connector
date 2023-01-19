@@ -6,7 +6,7 @@ import org.apache.spark.sql.{DataFrame, SparkSession}
 
 object TPCHApp extends App {
 
-  override def main(args: Array[String]): Unit = {
+
     println("Start")
 
     val spark = SparkSession.builder.master("local[*]").getOrCreate()
@@ -71,7 +71,7 @@ object TPCHApp extends App {
       cacheTables(spark, tableMap, i)
      // benchmark(spark, i, query, true)
     }
-  }
+
 
   var first = true
   def benchmark(sparkSession: SparkSession, i: Int, f: SparkSession => (Array[_], DataFrame), skipPlan: Boolean): Unit = {
