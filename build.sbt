@@ -18,7 +18,7 @@ version      := "0.1.0-alpha-SNAPSHOT"
 
 scalaVersion := "2.13.10"
 
-libraryDependencies += "com.google.cloud" % "google-cloud-spanner" % "1.1.0"
+libraryDependencies += "com.google.cloud" % "google-cloud-spanner" % "6.35.1"
 libraryDependencies += "org.apache.spark" %% "spark-sql" % "3.3.1" % Provided
 
 val scalatestVer = "3.3.0-SNAP3"
